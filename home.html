@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004080;
+            /* Dark blue */
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffa500;
+            /* Orange */
+        }
+
+        .load {
+            background-color: gray;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .load-text {
+            white-space: nowrap;
+            position: absolute;
+            animation: move 10s linear infinite;
+        }
+
+        #clg_img {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            overflow: hidden;
+        }
+
+        #clg_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image fills the div while maintaining aspect ratio */
+        }
+
+        #department {
+            width: auto;
+            height: 600px;
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        #department_section {
+            width: calc(100% - 200px);
+            /* Max width minus 200px */
+            height: 500px;
+            background-color: rgb(223, 30, 30);
+        }
+
+        #department_section_heading {
+            height: 10%;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #department_section_heading p{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            color: #ffa500;
+        }
+
+        #department_section_branch{
+            height: 30%;
+            width: auto;
+            background-color: red;
+            display: flex;
+        }
+        
+        #department_section_branch div{
+            width: 25%;
+            height: 100%;
+            background-color: white;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            #clg_img {
+                height: 300px;
+                /* Adjust height for smaller screens */
+            }
+
+            #department_section {
+                width: calc(100% - 50px);
+                /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">GP Vikramgad</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#grievance">Grievance</a></li>
+        </ul>
+    </nav>
+    <div class="load">
+        <div class="load-text">
+            Approved by AICTE, New Delhi & DTE, Maharashtra, and Affiliated to Mumbai University.
+        </div>
+    </div>
+    <div id="clg_img">
+        <img src="https://images.collegedunia.com/public/college_data/images/appImage/1602518782slide2965x440.jpg?h=250&w=1000&mode=crop"
+            alt="College Image">
+    </div>
+    <div id="department">
+        <div id="department_section">
+            <div id="department_section_heading">
+                <p>Bachelor Degree Courses Offered</p>
+            </div>
+            <div id="department_section_branch">
+                <div id="department_section_branch_Computer">Computer Engineering</div>
+                <div id="department_section_branch_Electrical">Electrical Engineering</div>
+                <div id="department_section_Civil"><img src="https://www.sybespolytechnic.com/asset/images/electrical-icon.png" alt="" width="44" height="39">Civil Engineering</div>
+                <div id="department_section_branch_Mechanical">Mechanical Engineering</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
